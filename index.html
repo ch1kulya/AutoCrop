@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>AutoCrop</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="keywords" content="AutoCrop, обрезка изображений, обработка изображений, онлайн инструмент">
+  <meta name="author" content="ch1ka">
+  <meta name="description" content="AutoCrop - обрезка аватарок прямо в вашем браузере. Быстро и безопасно.">
+</head>
+<body class="bg-gray-900 text-white">
+
+  <div class="flex justify-center items-center min-h-screen">
+    <div class="card">
+      <div class="flex justify-between items-center mb-4">
+        <h1 class="text-2xl font-semibold">AutoCrop</h1>
+        <button id="themeToggle" class="p-2 text-lg">🌞</button>
+      </div>
+
+      <label for="customUpload" class="custom-upload-label">
+        Нажмите для загрузки изображений ☁️
+      </label>
+      <input id="customUpload" type="file" accept="image/*" multiple style="display: none;">
+
+      <div id="imagePreview"></div>
+
+      <button id="processBtn" class="mt-3">Обработать изображения</button>
+    </div>
+  </div>
+
+  <footer class="text-center mt-4 text-gray-500 text-xs">
+    <p>Изображения обрабатываются в вашем браузере &middot; made with &lt;3 by ch1ka</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
