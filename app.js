@@ -1,18 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('themeToggle');
   const customUpload = document.getElementById('customUpload');
   const imagePreview = document.getElementById('imagePreview');
   const processBtn = document.getElementById('processBtn');
 
   let images = [];
-  let isDarkMode = false;
-
-  themeToggle.addEventListener('click', () => {
-    isDarkMode = !isDarkMode;
-    document.body.classList.toggle('dark-mode');
-    document.querySelector('.card').classList.toggle('dark-mode');
-    themeToggle.textContent = isDarkMode ? '🌙' : '🌞';
-  });
 
   customUpload.addEventListener('change', (event) => {
     images = Array.from(event.target.files);
